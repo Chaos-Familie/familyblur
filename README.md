@@ -5,6 +5,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [License](#license)
 
 ## About <a name = "about"></a>
 
@@ -66,3 +67,9 @@ Start the development server with `bun dev` - the Server runs on the port `3000`
 **Response**
 
 an Attached image
+
+## License
+
+This project is distributed and licensed under the [**GPL-3.0**](./LICENSE) license.
+
+© 2025 [Chaos Familie](https://github.com/Chaos-Familie)
