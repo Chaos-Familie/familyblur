@@ -26,7 +26,17 @@ Bun.serve({
           }
         }
 
-        const image = await loadImage(data.data);
+        const rawData = atob(data.data);
+        const buffer = new Uint8Array(rawData.length);
+
+        for (let x = 0; x < rawData.length; x++) {
+          buffer[x] = rawData.charCodeAt(x);
+        }
+
+        const convertedImage = await sharp(buffer)
+          .jpeg({ force: true, quality: 50 })
+          .toBuffer();
+        const image = await loadImage(convertedImage);
         const imageData = getImageData(image as any);
 
         return Response.json(
